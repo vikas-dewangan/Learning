@@ -125,7 +125,7 @@ export default function Sidebar() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["react", "angular"].map((text, index) => (
+          {["react"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton onClick={() => handleNavigate(`/${text}`)}>
                 <ListItemIcon>
@@ -142,7 +142,6 @@ export default function Sidebar() {
       <Main open={open} style={{ marginTop: "55px" }}>
         <Routes>
           <Route path="/react" element={<ReactTutorial />} />
-          <Route path="/angular" element={<AngularTutorial />} />
         </Routes>
       </Main>
     </Box>
