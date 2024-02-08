@@ -19,6 +19,7 @@ import { useNavigate, Route, Routes } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import ReactTutorial from '../React/react';
 import AngularTutorial from '../Angular/angular';
+import Home from '../common/Home';
 
 const drawerWidth = 240;
 
@@ -141,6 +142,7 @@ export default function Sidebar() {
       </Drawer>
       <Main open={open} style={{ marginTop: "55px" }}>
         <Routes>
+        <Route path="/" element={<Home />} />
           <Route path="/react" element={<ReactTutorial />} />
         </Routes>
       </Main>
