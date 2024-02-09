@@ -17,8 +17,9 @@ function CodeSnippet(props: CodeTypes) {
     <Grid item>
       <Paper elevation={3} style={{ padding: 16, margin: 16}} sx={{width:{
               sm:"100%",
-              md:"50%"
-            }}}>
+              md:"80%"
+            },
+            height:"50%" }}>
         {description && <Typography variant="body1" fontWeight={600}>{description}</Typography>}
         <SyntaxHighlighter language={lang ?? "javascript"} style={tomorrow}>
           {code}

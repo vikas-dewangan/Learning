@@ -27,3 +27,16 @@
       padding: 2% 0%;
     }
   }
+
+.linkdesign{
+    color: blue;
+    text-decoration: none;
+}
+
+.linkdesign:visited{
+    color: orange;
+}
+.linkdesign:hover{
+    text-decoration: underline;
+    color: aqua;
+}
