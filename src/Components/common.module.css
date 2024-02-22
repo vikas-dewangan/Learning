@@ -19,7 +19,7 @@
 }
 
 .mainItem{
-    padding: 2% 20%;
+    padding: 2% 4%;
 }
 
 @media (max-width: 600px) {
@@ -40,3 +40,4 @@
     text-decoration: underline;
     color: aqua;
 }
+
