@@ -18,7 +18,9 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import { useNavigate, Route, Routes } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import ReactTutorial from '../React/react';
+import JsTutorial from '../Javascript/Javascript';
 import AngularTutorial from '../Angular/angular';
+import Home from '../common/Home';
 
 const drawerWidth = 240;
 
@@ -89,6 +91,10 @@ export default function Sidebar() {
     handleDrawerClose();
   };
 
+  const showSubTopics = ()=>{
+      //Show the sub topics when clicked on Subject(React/JavaScript)
+  }
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -125,7 +131,7 @@ export default function Sidebar() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["react"].map((text, index) => (
+          {["react", "javascript"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton onClick={() => handleNavigate(`/${text}`)}>
                 <ListItemIcon>
@@ -141,7 +147,9 @@ export default function Sidebar() {
       </Drawer>
       <Main open={open} style={{ marginTop: "55px" }}>
         <Routes>
+        <Route path="/" element={<Home />} />
           <Route path="/react" element={<ReactTutorial />} />
+          <Route path="/javascript" element={<JsTutorial />} />
         </Routes>
       </Main>
     </Box>

@@ -19,7 +19,7 @@
 }
 
 .mainItem{
-    padding: 2% 20%;
+    padding: 2% 4%;
 }
 
 @media (max-width: 600px) {
@@ -27,3 +27,17 @@
       padding: 2% 0%;
     }
   }
+
+.linkdesign{
+    color: blue;
+    text-decoration: none;
+}
+
+.linkdesign:visited{
+    color: orange;
+}
+.linkdesign:hover{
+    text-decoration: underline;
+    color: aqua;
+}
+
