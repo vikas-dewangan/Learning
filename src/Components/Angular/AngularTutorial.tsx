@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Grid, Paper, Typography, Button } from "@mui/material";
-import classes from "../../Components/common/common.module.css";
-import CodeSnippet from "./CodeSnippet";
+import classes from "../../Components/Common/common.module.css";
+import CodeSnippet from "../Common/CodeSnippet";
 
 function AngularTutorial() {
   const [showCode, setShowCode] = useState(false);
