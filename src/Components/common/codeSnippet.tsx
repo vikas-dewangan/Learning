@@ -10,7 +10,7 @@ interface CodeTypes {
   imgurl?:string;
 }
 
-function CodeSnippet(props: CodeTypes) {
+function CodeSnippet(props: Readonly<CodeTypes>) {
   const { code, description, lang, snapshot, imgurl} = props;
 
   return (

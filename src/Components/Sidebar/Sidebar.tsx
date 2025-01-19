@@ -17,8 +17,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import { useNavigate, Route, Routes } from 'react-router-dom';
 import { Typography } from '@mui/material';
-import ReactTutorial from '../React/react';
-import AngularTutorial from '../Angular/angular';
+import ReactTutorial from '../React/ReactTutorial';
+import AngularTutorial from '../Angular/AngularTutorial';
 
 const drawerWidth = 240;
 
@@ -125,7 +125,7 @@ export default function Sidebar() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["react"].map((text, index) => (
+          {["react","angular"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton onClick={() => handleNavigate(`/${text}`)}>
                 <ListItemIcon>
@@ -142,6 +142,7 @@ export default function Sidebar() {
       <Main open={open} style={{ marginTop: "55px" }}>
         <Routes>
           <Route path="/react" element={<ReactTutorial />} />
+          <Route path="/angular" element={<AngularTutorial />} />
         </Routes>
       </Main>
     </Box>
