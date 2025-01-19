@@ -19,6 +19,7 @@ import { useNavigate, Route, Routes } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import ReactTutorial from '../React/ReactTutorial';
 import AngularTutorial from '../Angular/AngularTutorial';
+import JavaScriptTutorial from '../JavaScript/JavaScriptTutorial';
 
 const drawerWidth = 240;
 
@@ -125,7 +126,7 @@ export default function Sidebar() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["react","angular"].map((text, index) => (
+          {["react","angular","js"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton onClick={() => handleNavigate(`/${text}`)}>
                 <ListItemIcon>
@@ -143,6 +144,7 @@ export default function Sidebar() {
         <Routes>
           <Route path="/react" element={<ReactTutorial />} />
           <Route path="/angular" element={<AngularTutorial />} />
+          <Route path="/js" element={<JavaScriptTutorial />} />
         </Routes>
       </Main>
     </Box>
